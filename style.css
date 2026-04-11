@@ -239,6 +239,7 @@ iframe {
   body {
     overflow-y: auto;
     height: auto;
+    margin: 2rem;
   }
 
   .layout {
