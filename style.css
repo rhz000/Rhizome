@@ -248,6 +248,10 @@ iframe {
     height: auto;
   }
 
+  #submenu {
+    flex-direction: column;
+  }
+
   #player {
     width: 300px;
   }

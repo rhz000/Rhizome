@@ -65,7 +65,7 @@ function visIndhold (item) {
     const player = item.querySelector('player');
     if (player) {
         const knap = document.createElement('p');
-        knap.textContent = '▶ ' + item.getAttribute('name');
+        knap.textContent = '▶︎ ' + item.getAttribute('name');
         knap.style.cursor = 'pointer';
         knap.className = 'play-knap';
 
