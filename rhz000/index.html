@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rhizome</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rhizome · Copenhagen-based label for experimental music">
+    <meta name="author" content="Mads Krue Bugge">
+    <meta property="og:title" content="Rhizome">
+    <meta property="og:description" content="Copenhagen-based label for experimental music">
+    <meta property="og:url" content="MANGLER">
+    <meta property="og:image" content="MANGLER">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rlo8kbd.css"> <!-- Adobe fonts -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="256x256" href="MANGLER">
+    <link rel="apple-touch-startup-image" href="MANGLER">
+</head>
+
+<body>
+    <header>
+        <div id="venstre">
+            <h1 id="rubrik">Rhizome</h1>
+            <h2 id="underrubrik">@rhz000</h2>
+        </div>
+        <img id="logo" src="billeder/rhz000.png">
+    </header>
+    <div id="billedet"><img src="billeder/rhz000.png"></div>
+    <nav id="menu">
+        <p data-target="releases">releases</p>
+        <p data-target="events">events</p>
+        <p data-target="about">about</p>
+    </nav>
+    <div id="submenu-container"><div id="submenu"></div></div>
+    <main class="layout">
+        <div id="content"></div>
+        <div id="images"></div>
+    </main>
+
+    <!-- UDGIVELSER -->
+    <!-- 
+    Idé til opbygning
+        Venstre:
+            Tekst
+        Højre:
+            Artwork (måske med link til bandcamp)
+            Ét billede af fysisk udgivelse (hvis der er en) (måske med link til bandcamp)
+            Ét pressebillede
+    -->
+    <template id="data-releases">
+        <item name="Alto Aria: Ephemeral">
+            <tekst>released November 14, 2025
+<!--<a href="https://rhz000.bandcamp.com/album/ephemeral" target="_blank">Bandcamp</a>-->
+A porous heart
+Cracked open
+A thousand spores
+Drawing images in the sky
+
+Lines of the past
+Reach out for the future
+Soil is forming
+Seasons return
+
+You blossom in fall
+An eclipse revolving
+Soft as summer snow
+
+Guided by the moon
+Under the stars
+You're not alone
+Never have been
+
+We always need more time
+But a moment can last forever
+
+The body knows ephemeral
+More open than ever
+
+No words for this
+But angel
+
+<strong>credits</strong>
+Music by Aria Leth Schütze
+Featuring Croatian Amor
+Featuring Dimming
+Featuring Skarv
+Featuring Space Afrika
+Featuring Yan Higa
+Cover of Olive's 'You're Not Alone'. Words & music by Robin Taylor-Firth / Tim Kellett. © 1996 Edward Kassner Music Co. Ltd / Downtown Music UK Ltd. Used by permission. All rights reserved.
+Double bass by Mark Ibsgaard Gregersen
+Saxophone by Astrid Nørgaard
+Creative consultancy by Laura Cecilie Krogtoft
+Poem guidance by Gabriel René Franjou
+Produced with Mads Krue Bugge
+Mixed by Mads Krue Bugge
+Mastered by Joel Krozer at Six Bit Deep
+Painting by Elsebet Schütze
+Promoted by Modern Matters
+Supported by Koda Kultur
+
+RHZ-029
+2025 Rhizome</tekst>
+                <img src="billeder/releases/ephemeral.jpg" caption="© Elsebet Schütze">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=4142164073/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/ephemeral">Ephemeral by Alto Aria</a></iframe>
+                </player>
+        </item>
+        <item name="Nemo: Blue is the color of infinity">
+        <tekst>released October 24, 2025
+
+<strong>credits</strong>
+Music by Emma Louise Ottsen Knudsen
+Mixed by Mads Krue Bugge
+Stem mastered by Joel Krozer
+'Monster' piano by Johan August Dyrløv Høegh
+'Mini' backing vocals by Amalie Hannibal Petri
+'Lonely Car' co-writing by Viola Wendelboe Faber
+'No Sphere' and 'Ocean' electric bass by Mark Ibsgaard Gregersen
+'Paranoia Galaxy' electric bass by Mads Krue Bugge
+Press photos by Marthe Bleu
+Artwork by Inge Maria Maier and Iben April Hegreberg
+Promoted by Fomo
+
+RHZ-027
+2025 Rhizome</tekst>
+        <img src="billeder/releases/blue-is-the-color-of-infinity.jpg" caption="© Inge Maria Maier & Iben April Hegreberg">
+        <player>
+            <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=4277062771/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/blue-is-the-color-of-infinity">Blue is the color of infinity by Nemo</a></iframe>
+        </player>
+        </item>
+        <item name="Margos: End of Greatness">
+            <tekst>released September 26, 2025
+
+<strong>credits</strong>
+Music by Isidore De Souza
+Mixed and mastered by Isidore De Souza
+Artwork by Constantin Schlachter
+Press photos by Aria Leth Schütze
+
+RHZ-028
+2025 Rhizome</tekst>
+            <img src="billeder/releases/end-of-greatness.jpg" caption="© Constantin Schlachter">
+            <player>
+                <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2082044297/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/end-of-greatness">End of Greatness by Margos</a></iframe>
+            </player>
+        </item>
+        <item name="Skarv: Polymer Veil">
+            <tekst>released October 25, 2024
+
+<strong>credits</strong>
+Music & artwork by Mads Krue Bugge
+Composite A co-written & co-produced by Anna Wærum Hansen
+Composite B co-written by Emma Ottsen Knudsen
+Skin Across Deep co-written by Laura Marie Madsen & co-produced by Aria Leth Schütze
+Success co-written by Aria Leth Schütze
+
+RHZ-025
+2024 Rhizome</tekst>
+                <img src="billeder/releases/polymer-veil.jpg" caption="© Mads Krue Bugge">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1780342992/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/polymer-veil">Polymer Veil by Skarv</a></iframe>
+                </player>
+        </item>
+        <item name="Lau Andersson: The Weeping Siege">
+            <tekst>released May 10, 2024
+
+<strong>credits</strong>
+Music and artwork by Lau Andersson
+Cello by Markus Tange
+Mastered by Mads Krue Bugge
+Artwork by Orgaphine
+
+RHZ-024
+2024 Rhizome</tekst>
+            <img src="billeder/releases/the-weeping-siege.jpg" caption="© Orgaphine">
+            <player>
+                <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2457061344/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/the-weeping-siege">The Weeping Siege by Lau Andersson</a></iframe>
+            </player>
+        </item>
+        <item name="Messell: envelope follower">
+            <tekst>released April 19, 2024
+
+<strong>credits</strong>
+Music by Martin Messell
+Master by Valdemar Kragelund
+Artwork by Christian Kingo
+Video by Christian Kingo
+Press photo by Martin Messell
+
+RHZ-023
+2024 Rhizome</tekst>
+                <img src="billeder/releases/envelope-follower.jpg" caption="© Christian Kingo">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=607139796/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/envelope-follower">envelope follower by Messell</a></iframe>
+                </player>
+        </item>
+        <item name="Alto Aria: Limerence">
+                <tekst>released February 14, 2024
+
+'Limerence' is an album dedicated to the brokenhearted - for those whose hearts aren't mirrored. The songs together are manifold, insisting on the variety of emotions that arise when you have a broken heart but at the same time do not see yourself as broken.
+
+Sonically, the album deals with softness and hardness. It weaves these two together to create tension and release. Throughout the album whispering voices, field recordings, strings, and hard cold beats create the foundation for different feelings to unfold.
+
+<strong>credits</strong>
+Music by Aria Leth Schütze
+Featuring Frederik Lehmann, Holger Seidelin,
+Laura Cecilie and Viola Faber
+Mixed with Mads Krue Bugge
+Mastered by Joel Krozer
+Artwork and amulet by Nikolaj Exner
+Press photos by Amanda Bødker
+Outfit by Alectra Rothschild
+Promo by Fomo
+
+RHZ-022
+2024 Rhizome</tekst>
+            <img src="billeder/releases/limerence.jpg" caption="© Nikolaj Exner">
+            <player>
+                <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=269538200/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/limerence">Limerence by Alto Aria</a></iframe>
+            </player>
+        </item>
+        <item name="Ingri Høyland: Ode To Stone">
+            <tekst>released November 24, 2023
+
+The Copenhagen-based composer and sound artist Ingri Høyland releases a new album - a sound collage in 7 pieces.
+
+The album 'Ode To Stone' is created together with the artists Ida Urd, Sofie Birch and Lea Gulditte Hestelund. The 7 compositions investigates the small and big movements and synergies between the stone, the wind, the dunes, the light at the coast of Northern Denmark. The album attempts to physically and abstractly expand our sensation of time and is drawn towards the slow, the extended, and the fluid. A movement and longing towards the earth and the stone.
+
+<strong>credits</strong>
+Concept and idea by Ingri Høyland & Lea Guldditte Hestelund
+Composed, produced and performed by Ingri Høyland & Ida Urd
+Mixed by Sofie Birch
+Mastered by Ingrid Loftsgarden
+Artwork by Tali Bayer
+Supported by Koda Kultur
+
+RHZ-021
+2023 Rhizome</tekst>
+                <img src="billeder/releases/ode-to-stone.jpg" caption="© Tali Bayer">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1830630299/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/ode-to-stone">Ode To Stone by Ingri Høyland</a></iframe>
+                </player>
+        </item>
+        <item name="Irmgard: Irmgard Irmgaard">
+            <tekst>released October 13, 2023
+
+'Irmgard Irmgaard' is an investigation and unfolding of the character Irmgard, a project made by composer Astrid Nørgaard. The debut album draws inspiration from weavings made by Astrids mother, Dorthe Nørgaard, and circles around the themes of interweavings, connections, heritage and patterns that repeat without finding a final form.
+
+Irmgard [irmin = “all, strong, whole, entire” + gard = “enclosure, protection, encircle, garden] is a place of care and rest, a safe enclosure around one's inner world. Irmgard takes many forms: A caregiving sister, a fortress, a garden, a small insect-like person, a weaving to lie on or wrap around you.
+
+Irmgard is a place to withdraw and shield yourself from too many external influences - while staying connected to the beings around you.
+
+The music of the album seeks to interpret the repetitiveness, tactility and simplicity of the weavings by incorporating airy, circular melodies contrasting with shimmering fluctuations and undulating soundscapes. Irmgard is dialogues, gentle duets interweaving rooms for longing with room for caregiving, the harmonious acoustics with synthetic noise.
+
+Connecting fibres to connect threads into a strong fabric, and the opposite movement; the unraveling of the strong enclosure to reveal the vulnerable softness underneath.
+
+<strong>credits</strong>
+Written by Astrid Emilie Nørgaard
+Alto saxophone and electronics by Astrid Emilie Nørgaard
+Violin by Astrid Marie Forsberg Thysk
+Flugelhorn by Carlo Janusz Becker Lauritsen
+Recorded and mixed by Astrid Emilie Nørgaard and Johanna Nielsen
+Mastered by Mads Krue Bugge
+
+RHZ-020
+2023 Rhizome</tekst>
+                <img src="billeder/releases/irmgard-irmgaard.jpg" caption= "© Astrid Emilie Nørgaard">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3591353645/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/irmgard-irmgaard">Irmgard Irmgaard by Irmgard</a></iframe>
+                </player>
+        </item>
+        <item name="Various artists: Hypersea">
+            <tekst>released September 1, 2023
+
+'Hypersea' is a collection of pieces inspired by Astrida Neimanis 'Hydrofeminism: Or, On Becoming a Body of Water'. A palette of artists, which we find inspiring, have been invited in to make a piece of music with the text as a point of departure, and it has been up to the artist to find a way to interpret the text and let it find its way into their work.
+
+The album has become a collection of pieces containing a watery quest, fast footsteps, shifting and fragmented choirs, broken beats and hearts, soothing synthesisers, harsh winds, caring bodies, enchanting laughter, uplifting melodies, polyphonic saxophones, and long reverbs.
+
+'Hypersea' has been curated by Alto Aria and presents works by Hôy la, ilinx, Saltmother, Julia Becker, ill, Angel Wei, Lyra Valenza, Faber, Jason Lee, Bysund, Holger Seidelin, Astrid Nørgaard, KRY, Laenz, Varnrable, Messell, Alto Aria, and Skarv.
+
+<strong>credits</strong>
+Music by Hôy la, ilinx, Saltmother, Julia Becker, ill, Angel Wei, Lyra Valenza, Faber, Jason Lee, Bysund, Holger Seidelin, Astrid Nørgaard, KRY, Laenz, Varnrable, Messell, Alto Aria, and Skarv
+Mastered by Jason Lee Cameron
+Artwork by Mads Krue Bugge
+
+RHZ-019
+2023 Rhizome</tekst>
+                <img src="billeder/releases/hypersea.jpg" caption="© Mads Krue Bugge">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2706095624/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/hypersea">Hypersea by Various Artists</a></iframe>
+                </player>
+        </item>
+        <item name="Alto Aria: Touch">
+            <tekst>released June 16, 2023
+
+The album came into being as an interest in the relations between art and mental illness. Focusing on texture and tactility, I wanted to put into music how it feels to be a person living with a mental illness.
+
+I wanted to give mental illness a place in art focusing on everyday life, on texture and tactility. To touch and be touched. To get in touch, to lose touch and be out of touch. To feel something rough or smooth, soft or hard.
+
+Lyrically, the album centres on different situations throughout everyday life like that of letting your hand slip through the grass, looking at an object break, following how the seasons change and how it feels to be alienated from yourself and your surroundings.
+
+Sonically, the album dives into different sounds and how they sound. Trying to create room for the sounds to unfold and merge into each other creating new sounds. Throughout the album sounds of water, strings, piano and vocals are weaved together changing meaning in relation.
+
+<strong>credits</strong>
+Music by Aria Leth Schütze
+Mixed with Mads Krue Bugge
+Mastered by Joel Krozer
+Artwork by Amanda Bødker
+Video by Orgaphine
+
+Thank you KODA for the support!
+
+RHZ-017
+2023 Rhizome</tekst>
+                <img src="billeder/releases/touch.jpg" caption="© Amanda Bødker">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=244411862/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/touch">Touch by Alto Aria</a></iframe>
+                </player>
+        </item>
+        <item name="Alto Aria, Skarv: Time Stretches (Stretched Version)">
+            <tekst>released May 7, 2023
+
+Marking the 3 year anniversary of Rhizome's first release, 'Tides' by Alto Aria, Rhizome releases a Skarv rework of its closing track 'Time Stretches'. Speaking to the sorrowful nature of 'Tides', the rework takes a step back in time and zooms in on a single moment, expanding on its melancholic phrasing.
+
+The track, originally based on a 1 second violin sample stretched to the song's 5 minute duration, has here been elongated even further, reaching a total length of 21 minutes and 16 seconds. Apart from processed stems of the original track, the rework contains vocal samples picked from 'Tides' as well as fresh synth-parts, and field recordings made in Northern Jutland.
+
+<strong>credits</strong>
+Music and mixed by Aria Leth Schütze and Mads Krue Bugge
+Mastered by Mads Krue Bugge
+Artwork by Aria Leth Schütze and Mads Krue Bugge
+
+RHZ-018
+2023 Rhizome</tekst>
+                <img src="billeder/releases/time-stretches.jpg" caption="© Aria Leth Schütze & Mads Krue Bugge">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3260242288/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/time-stretches-stretched-version">Time Stretches (Stretched Version) by Skarv, Alto Aria</a></iframe>
+                </player>
+        </item>
+        <item name="ill: íra">
+            <tekst>released May 5, 2023
+
+'íra' is the first release from Anna Wærum under the name ill.
+
+íra means anger and revenge in Latin and is one of the Seven Deadly Sins.
+íra is feisty arpeggio synthesizers, delicately collected live recordings, proud acoustic guitars and introspectively greedy pop melodies. íra is shiny soft ring armor, of t-shirts of images of t-shirts is armor is music. íra is breakup songs with the patriarchy, reading aloud on the dance floor and lazer pointers in bed. íra is the fight for access to our common resources, institutions, education, influence, sustenance and medical help. íra is the shield against the resistance bodies that ill's encounters, bodies that are called permanently disabled, hysterical.
+
+What if it's not my body that's wrong? What if I can make music in bed? What if my bed is my studio? What if it doesn't need to be mixed more than that? What if the first take was the only take and it mattered to me? What if the first take laughs in the face of the seventh take, saying “fuck takes!! I'm not a take!! I'm a fucking song from eternity and you can't delete me no matter how many times you press apple Z”? What if I'm just too exhausted… but I'm a star? What if my armor is my friends mixing it for me exaaaaaaactly the way I want it, even if we disagree? What if my sword is that I can lie here and experience the whole world and I don't need drugs or to live the (dudy) bohemian lifestyle because my antennae are longer than yours? What if the real work is to let it happen? To honor the moment and what was present? What if I don't have to feel bad to do something good? What if what comes must come from a body that feels safe? A body that can feel? What if that was my battle cry?
+
+I work from a body broken, but also, I work from a body, one that is continuously broken down, breaking. I work from trembling nerves, too exposed, unshielded. I work from a glittering body, shivering nerves too unshielded, a corner beaming with light. I work from a sunbeamed corner. 
+
+<strong>credits</strong>
+Co.mix on the entire EP: Mads Krue Bugge
+Master: Mads Krue Bugge
+Publishing and press work: Mads Krue Bugge and Aria Leth Schütze
+Co. production on Plead From The Patient: Mads Krue Bugge, Emma Ottsen Knudsen
+Lyrics, voice, collaboration on Complaint In The Making: Deirdre J. Humphrys
+Co. production on Battlefield: Simon Formann, Mads Krue Bugge
+Piano and co. production on Bruises Of Armor: Agnes Hartvig
+Recording and interview on íra iii: Emma Ottsen Knudsen
+Press photos: Aria Leth Schütze
+Cover art and t-shirt/armor art: Frederikke Jul Vedelsby
+Choreography on live performance: Karis Zidore
+All lyrics, recordings, fieldrecordings, vocals, production, mix, outfits: Anna Wærum Hansen
+
+RHZ-015
+2023 Rhizome</tekst>
+                <img src="billeder/releases/ira.jpg" caption="© Frederikke Jul Vedelsby">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2279857020/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/ra">íra by ill</a></iframe>
+                </player>
+        </item>
+        <item name="Ida Urd: Future Woman Am Pm">
+            <tekst>released March 24, 2023
+
+The compositions is taking its point of departure with the three characters Future Woman, Modern Girl and Me, and reflects upon how it is to be a young woman and human today. The characters' life unfolds in a fictional world where past, present and future exist side by side, and where the characters merge and morph within a day where the story takes place.
+
+Future Woman Am Pm is a piece within the field of a science fiction-inspired world which deals with social media. The music is made with care for the three characters which carry the story, and care and thoughts for the generation of people growing up in a time where the real world does not seem to be easy to define.
+
+<strong>credits</strong>
+Music and libretto Ida Urd
+Guitar and keyboard by Daniel Scheffmann
+Mixed by Anja Tietze Lahrmann
+Mastered by Mads Krue Bugge
+Artwork by Mads Krue Bugge
+
+RHZ-016
+2023 Rhizome</tekst>
+                <img src="billeder/releases/future-woman-am-pm.jpg" caption="© Mads Krue Bugge">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1584678563/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/future-woman-am-pm">Future Woman Am Pm by Ida Urd</a></iframe>
+                </player>
+        </item>
+        <item name="Laenz: Letter">
+            <tekst>released January 20, 2023
+
+The two tracks in many ways draw from the most exposed source of creative compulsion. They are the bookends of one's surrender to a yearning outside of one's own. 'Burning' is the precursor, 'The Sequel' is a declaration. Taking from an observation of nuance from Barthes, the two tracks are fragments of an enduring preoccupation with devotion. Their sonic approach is indistinguishable from the feelings inscribed. In 'Burning, the production is a dizzying navigation of emotions under fire, from wonky quips and glossy lasers to cavernous susurration. 'The Sequel', on the other hand, is a soft, continuous ride — a glow from a distance. A combination of pining and avowal bleeds through ghostly sonics and unrelenting drum patterns. The two together comprise a letter, one that proposes renewal and return over a lifetime of loving.
+
+<strong>credits</strong>
+Music by Christina Lan
+Mastered by Mads Krue Bugge
+Artwork by Christina Lan and Caitlin Young
+
+RHZ-014
+2023 Rhizome</tekst>
+                <img src="billeder/releases/letter.jpg" caption="© Christina Lan & Caitlin Young">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=4084777639/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/letter">Letter by Laenz</a></iframe>
+                </player>
+        </item>
+        <item name="Polly: Invitation">
+            <tekst>released November 25, 2022
+
+The album is about relations - to friends, family, lovers and oneself. The songs are small scenes from where I dive into these relations; here I've found themes such as longing, frustration, joy and care to sing about. With the album I'd like to encourage leaving bad encounters and being with the ones you love instead.
+RHZ-010
+2022 Rhizome</tekst>
+                <img src="billeder/releases/invitation.jpg" caption="© Amanda Bødker">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1508284608/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/invitation">Invitation by Polly</a></iframe>
+                </player>
+        </item>
+        <item name="Alto Aria: Sowing Worlds">
+            <tekst>released May 20, 2022
+
+'Sowing Worlds' came into being as an interest in transformation and transition. An interest in creating and holding room for feelings and emotions. A room for leaving behind certain ways of being in the world and creating new ones. A room for care for oneself and others. A wish for connection and complexity. For planting a seed and letting it grow over time.
+
+Sonically, the album focuses on merging electronic and acoustic sounds, played and programmed, song and sound. Field recordings have been a focus both as a way of creating a room as well as the source of the sound. Throughout the album sounds of water, bats in the night, birds, double bass, violin, acoustic guitar, synth, and modular synthesis are twisted and twined together. A phoenix cyclically reborn in flames.
+
+<strong>credits</strong>
+Music by Maria Leth Schütze
+Mixed and mastered with Mads Krue Bugge
+Double bass by Mark Ibsgaard Gregersen
+Artwork by Amanda Bødker
+
+RHZ-009
+2022 Rhizome</tekst>
+                <img src="billeder/releases/sowing-worlds.jpg" caption="© Amanda Bødker">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2316602735/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/sowing-worlds">Sowing Worlds by Alto Aria</a></iframe>
+                </player>
+        </item>
+        <item name="l_m: intimacy issues">
+            <tekst>released February 18, 2022
+
+5 songs for everyone with bruised hearts, everyone who fell for a bad boy (again), everyone who went home with the wrong person, and everyone who felt that they were too much or too little <3
+
+<strong>credits</strong>
+Composed, produced, and performed by l_m
+Mixed with Simon Mariegaard
+Mastered by Emil Thomsen
+
+RHZ-008
+2022 Rhizome</tekst>
+                <img src="billeder/releases/intimacy-issues.jpg" caption="© l_m">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=178693442/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/intimacy-issues">intimacy issues by l_m</a></iframe>
+                </player>
+        </item>
+        <item name="Skarv: Haptic Feedback">
+            <tekst>released November 18, 2021
+
+“In an apartment framed by smooth concrete walls is a large single-paned glass window revealing lights in the windows of far apartment blocks. When you open the window the air feels cold and dry and you hear a faint boombox playing bass music over distant yells of protests. Through the wall to your left, you hear someone scratching it from the other side. As you place your head against the wall, the sound is transduced and you hear the scratching from within your skull.
+
+Closing the window you see the reflection of the lights inside the apartment, two pastel magenta LED panels on the walls and a cold white fluorescent tube hanging over the desk. On the desk is a notebook and a couple of loose hard drives. Opposing the desk is the bed on which there is an open, glowing laptop and a pair of headphones. When you sit down, take the headphones on, plug them in and press play,”
+
+
+
+'Haptic Feedback' is the second record and first EP by Skarv, moniker of composer and electronic musician Mads Krue Bugge.
+
+On 'Haptic Feedback' Skarv leaves the biosphere behind and embarks on a search for intimacy on a trip into the digital void of a laptop computer. Picking samples and synthesized sounds, he unfolds connections to each sound through moving but thorned compositions. The EP is a set of five tracks separated by abrupt transitions and continues the sonic investigation of his own alienation from and discontentment with the world that started with his first record, 'A Memory Like Any Other'. 
+
+<strong>credits</strong>
+Music, text and artwork by Skarv
+Featuring Alto Aria on 'Realistic Touch'
+Mastered with Maria Leth Schütze
+
+RHZ-007
+2021 Rhizome</tekst>
+                <img src="billeder/releases/haptic-feedback.jpg" caption="© Mads Krue Bugge">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1509302419/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/haptic-feedback">Haptic Feedback by Skarv</a></iframe>
+                </player>
+        </item>
+        <item name="Various artists: bag/belly/box">
+            <tekst>released March 26, 2021
+
+'bag/belly/box' is a collection of pieces inspired by Ursula K. Le Guin's 'The Carrier Bag Theory of Fiction'. In its entirety, the compilation acts as a container of experiences and expressions of the artists involved.
+
+The container holds the local park, repressed feelings, internalized change, a list of plants, the gatherer, nerve endings, openings, and a glimpse of everyday life. It unfolds emotions and feelings of alienation, sensitivity, distrust, liminality, curiosity, uncertainty, loneliness, and care. Ready to be opened and closed. For you to keep as you move on.
+
+'bag/belly/box' has been curated by Alto Aria and Skarv and presents works by Helena Gao, ioulus, J Sliwa, KRY, L.Mantis, Lucas Chikhieo, Messell, Ryong, as well as the curators.
+
+All proceeds from album purchases on Bandcamp will be donated to Close Ellebæk, a group of activists continuing the work of resistance against Ellebæk Prison at Center Sandholm.
+
+<strong>credits</strong>
+Music by Lucas Chikhieo, L.Mantis, Messell, ioulus, Ryong, J Sliwa, Helena Gao, Alto Aria, Skarv, KRY
+Artwork by Amanda Bødker
+Mastered by Mads Krue Bugge and Maria Leth Schütze
+
+RHZ-005
+2021 Rhizome</tekst>
+                <img src="billeder/releases/bag-belly-box.jpg" caption="© Amanda Bødker">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3744965488/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/bag-belly-box">bag/belly/box by Various Artists</a></iframe>
+                </player>
+        </item>
+        <item name="ioulus: oddkin">
+            <tekst>released March 5, 2021
+
+a new experience of time created bell jar
+(2)-b focused on past and present
+c relationships
+dive drunk eyes of my reality
+embellished mind-patterns i entangle
+fast destiny in card collection and
+great great sorrow
+hill roads and bare drawers
+i try not to-
+judge myself_cmd shift s
+knowing little do I know // knowing i cant fix u
+love eats self love eats co star
+mind blown and walking in clue of clay
+narrow forms of kinships
+on top of hallucinations
+performing society structures
+qt while sad listening to common coquis
+remember to forget what I've been taught
+surrounding myself with critters
+tentacles of empathy
+unite care now unite care
+very
+witches web
+x
+y x y cross my heart
+zen and cu cynical 
+
+<strong>credits</strong>
+Music by Julia Becker
+Mastered by Emil Thomsen
+Artwork and prints by Organs named they like you
+Guitar on 'can't fix you' sampled from 'Vine 1' by Synd og Skam
+'cmd shift s' is a cover of 'Lyse Nætter' by Alberte Winding and Aske Bentzon
+
+RHZ-004
+2021 Rhizome</tekst>
+                <img src="billeder/releases/oddkin.jpg" caption="© Organs named they like you">
+                <img src="billeder/releases/physical/oddkin-poster.jpg" caption="© Mads Krue Bugge & Aria Leth Schütze">
+                <img src="billeder/artists/ioulus-oddkin.jpeg" caption="© Aria Leth Schütze">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3710295318/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/oddkin">oddkin by ioulus</a></iframe>
+                </player>
+        </item>
+        <item name="Skarv: A Memory Like Any Other">
+            <tekst>released August 14, 2020
+
+'A Memory Like Any Other' is the first album by Skarv, moniker of composer and electronic musician Mads Krue Bugge.
+
+Like the flowers growing through floors of forgotten concrete, 'A Memory Like Any Other' presents a view of human life as seen from the point of alienation. The music, driven by a constant pacing between the building up and tearing down of forms, becomes a continuous construction and destruction of the relatable. Consisting of seven digital structures, the album operates through timbral exploration and dynamic variation.
+
+Each track is a figment of the architecture of industry; stripped of all ornaments and laid bare to reveal its functions. The album appears as a memory of a never-materialising future – one devoid of, yet shaped by human intent and interference.
+
+The music is accompanied by a 250x250x2mm steel plate with engraved graphics by Skarv.
+
+<strong>credits</strong>
+Music and steel plate by Skarv
+Mastered with Maria Leth Schütze
+Photography by Maria Leth Schütze
+48°38'35.8"N 20°13'04.8"E
+
+RHZ-002
+2020 Rhizome</tekst>
+                <img src="billeder/releases/a-memory-like-any-other.jpg" caption="© Aria Leth Schütze & Mads Krue Bugge">
+                <img src="billeder/releases/physical/amlao-steel1.jpg" caption="© Mads Krue Bugge & Aria Leth Schütze">
+                <img src="billeder/artists/skarv-amlao.jpeg" caption="© Aria Leth Schütze">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3285666982/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/a-memory-like-any-other">A Memory Like Any Other by Skarv</a></iframe>
+                </player>
+        </item>
+        <item name="Alto Aria: Tides">
+            <tekst>released May 7, 2020
+
+'Tides' is an appreciation of tides and the transience of all things. Inspired by the rise and fall of the sea, how things appear, disappear and reappear, change in and out of form.
+
+Change is the only constant in life and the awareness of this can be bittersweet. Each piece focuses on different aspects of how everything is shaped and reshaped. Sounds like metallic birdcalls, arrhythmic heartbeats, disrupting foghorns, and cold winds continue to rise and fall, always changing just slightly.
+
+Focusing on transformation and transition, the album unfolds and balances between repetition and renewal, acoustic and electronic, song and sound. An opening for listening to change, not as a development, but as a process of becoming.
+
+The album is accompanied by a booklet designed by graphic design team Office Hours. An offset print on 150g paper, the booklet contains a description of the album, lyrics for the tracks and photographs from Northwest Jutland taken by Alto Aria. The booklet comes with an album download code.
+
+<strong>credits</strong>
+Music and photography by Maria Leth Schütze
+Mixed and mastered with Mads Krue Bugge
+Booklet design by Office Hours
+
+RHZ-001
+2020 Rhizome</tekst>
+                <img src="billeder/releases/tides.jpg" caption="© Aria Leth Schütze">
+                <img src="billeder/releases/physical/tides-booklet.jpeg" caption="© Aria Leth Schütze & Mads Krue Bugge">
+                <img src="billeder/artists/alto-aria-tides.jpeg" caption="© Mads Krue Bugge">
+                <player>
+                    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3786137611/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/tides">Tides by Alto Aria</a></iframe>
+                </player>
+        </item>
+    </template>
+
+    <!-- EVENTS -->
+    <template id="data-events">
+        <item name="events">
+<tekst><strong>past events</strong>
+
+<div class="event"><strong>Alto Aria 'Ephemeral' release</strong>
+Alice 14.11.2025
+
+Alto Aria
+Space Afrika</div>
+
+<div class="event"><strong>Nemo 'Blue is the color of infinity' release</strong>
+Harbo Bar 24.10.2025
+
+Nemo</div>
+
+<div class="event"><strong>Margos 'End of Greatness' release</strong>
+Proton Records 27.09.2025
+
+Margos</div>
+
+<div class="event"><strong>Polymer Veil release</strong>
+Mayhem 23.11.2024
+
+Skarv
+Ryong
+Soli City</div>
+
+<div class="event"><strong>'The Weeping Siege' release</strong>
+Mayhem 10.04.2024
+
+Lau Andersson
+Ryong
+Scarpia
+Barbora Kovacova</div>
+
+<div class="event"><strong>'envelope follower' release</strong>
+Christianshavns Beboerhus 20.04.2024
+
+Messell
+Heva Vaupel
+Nova Varnrable
+Grammar of Movement</div>
+
+<div class="event"><strong>Alto Aria 'Limerence' release</strong>
+Sum 23.02.2024
+
+Alto Aria
+Lau Andersson
+Polly</div>
+
+<div class="event"><strong>Ode To Stone release</strong>
+Mayhem 02.12.2023
+
+Ingri Høyland
+Gel
+Pamela Angela</div>
+
+<div class="event"><strong>Irmgard release</strong>
+Proton Records 13.10.2023
+
+Irmgard
+Ginte</div>
+
+<div class="event"><strong>Hypersea release</strong>
+Fitzroy 06.09.2023
+
+ill
+Alto Aria
+Nova Varnrable
+Ryong</div>
+
+<div class="event"><strong>Hypersea release</strong>
+Christianshavns Beboerhus 01.09.2023
+
+ill
+Skarv
+Ingri Høyland
+Ryong</div>
+
+<div class="event"><strong>ill 'íra' release</strong>
+Proton Records 05.05.2023 
+
+ill
+Asta Olivia Nordenhof</div>
+
+<div class="event"><strong>Polly release of 'Invitation'</strong>
+Christianshavns Beboerhus 26.11.2022 
+
+Polly
+Nemo
+Viola Faber
+Helena Gao</div>
+
+<div class="event"><strong>Rhizomatic Extensions</strong>
+Mayhem 16.09.2022
+
+Lucas Chikhieo
+Skarv
+Xenia Xamanek
+Lyra Valenza</div>
+
+<div class="event"><strong>Swell 'intimacy issues' release</strong>
+Flere Fugle 25.03.2022 
+
+Swell
+Irmgard</div>
+
+<div class="event"><strong>Øen x Rhizome</strong>
+Øen 11.09.2020
+
+Alto Aria
+ioulus
+Ryong</div></tekst>
+        </item>
+    </template>
+
+    <!-- ABOUT -->
+    <template id="data-about">
+        <item name="about">
+            <tekst><strong>about</strong>
+Founded in the Spring of 2020 by <a href="https://altoaria.com" target="_blank">Aria Leth Schütze</a> (they/them) and <a href="https://www.madskruebugge.dk" target="_blank">Mads Krue Bugge</a> (he/him), Rhizome is a Copenhagen-based record label dealing in experimental electronic music and alternative release formats, exploring the boundaries of sound and form.
+
+<a href="mailto:rhizomecph@gmail.com" target="_blank">rhizomecph@gmail.com</a>
+<a href="https://www.rhz000.bandcamp.com" target="_blank">bandcamp</a>
+<a href="https://soundcloud.com/rhz000" target="_blank">soundcloud</a>
+<a href="https://www.instagram.com/rhz000" target="_blank">instagram</a>
+            </tekst>
+            <img src="billeder/rhz2025.jpg" caption="© Mads Krue Bugge">
+        </item>
+    </template>
+
+    <div id="player"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
