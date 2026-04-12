@@ -233,6 +233,7 @@ iframe {
 .play-knap {
     font-weight: 600;
     width: fit-content;
+    font-size: 1.3rem;
 }
 
 @media (max-width: 600px) {
@@ -279,6 +280,15 @@ iframe {
     max-width: none;
     height: 100vh;
     width: auto;
+  }
+
+  #content .image-caption {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .play-knap {
+    margin-bottom: 1rem;
   }
 }
 

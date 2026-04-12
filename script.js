@@ -78,8 +78,10 @@ function visSubmenu (key) {
 
 // vis indhold
 function visIndhold (item) {
-    const tekst = item.querySelector('tekst')
-    content.innerHTML = tekst ? tekst.innerHTML : '';
+    const tekst = item.querySelector('tekst');
+    const billeder = item.querySelectorAll('img');
+
+    content.innerHTML = '';
     images.innerHTML = '';
 
     window.location.hash = item.getAttribute('slug'); //sæt location-hash
@@ -99,8 +101,28 @@ function visIndhold (item) {
         content.prepend(knap);
     }
 
-    const billeder = item.querySelectorAll('img');
-    billeder.forEach(img => {
+    if (billeder.length > 0 && window.innerWidth <= 600) {
+    const førsteImg = document.createElement('img');
+    førsteImg.src = billeder[0].getAttribute('src');
+    content.appendChild(førsteImg);
+
+    const caption = billeder[0].getAttribute('caption');
+    if (caption) {
+        const cap = document.createElement('p');
+        cap.textContent = caption;
+        cap.className = 'image-caption';
+        content.appendChild(cap);
+    }
+    }
+
+    if (tekst) {
+    const tekstNode = document.createElement('div');
+    tekstNode.innerHTML = tekst.innerHTML;
+    content.appendChild(tekstNode);
+    }
+
+    const startIndex = window.innerWidth <= 600 ? 1 : 0;
+    Array.from(billeder).slice(startIndex).forEach(img => {
         const el = document.createElement('img');
         el.src = img.getAttribute('src');
         images.appendChild(el);
@@ -113,6 +135,7 @@ function visIndhold (item) {
             images.appendChild(cap);
         }
     });
+
     submenu.innerHTML = '';
     aktivKey = null;
 };
