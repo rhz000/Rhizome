@@ -242,6 +242,19 @@ iframe {
     margin: 2rem;
   }
 
+  header {
+    height: 3rem;
+    padding: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+
   .layout {
     display: flex;
     flex-direction: column;
