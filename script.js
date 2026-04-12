@@ -8,12 +8,15 @@ const images = document.getElementById('images');
 const playerdiv = document.getElementById('player');
 const billedet = document.getElementById('billedet');
 let aktivKey = null;
+let aktivtItem = null;
+let erMobil = window.innerWidth <= 600;
 
 // header-klik, rydder indhold
 header.addEventListener('click', () => {
     window.location.hash = '';
     submenu.innerHTML = '';
     aktivKey = null;
+    aktivtItem = null;
     content.innerHTML = '';
     images.innerHTML = '';
     billedet.classList.remove('sløret');
@@ -78,6 +81,8 @@ function visSubmenu (key) {
 
 // vis indhold
 function visIndhold (item) {
+    aktivtItem = item;
+
     const tekst = item.querySelector('tekst');
     const billeder = item.querySelectorAll('img');
 
@@ -139,3 +144,16 @@ function visIndhold (item) {
     submenu.innerHTML = '';
     aktivKey = null;
 };
+
+// genopbygger indhold hvis skærmstørrelse ændres
+window.addEventListener('resize', () => {
+    const mobilNu = window.innerWidth <= 600;
+    
+    if (mobilNu !== erMobil) {
+        erMobil = mobilNu;
+        
+        if (aktivtItem) {
+            visIndhold(aktivtItem);
+        }
+    }
+});
