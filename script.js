@@ -1,3 +1,4 @@
+// hent det der skal bruges
 const header = document.querySelector('header');
 const menu = document.getElementById('menu');
 const submenu = document.getElementById('submenu');
@@ -8,7 +9,9 @@ const playerdiv = document.getElementById('player');
 const billedet = document.getElementById('billedet');
 let aktivKey = null;
 
+// header-klik, rydder indhold
 header.addEventListener('click', () => {
+    window.location.hash = '';
     submenu.innerHTML = '';
     aktivKey = null;
     content.innerHTML = '';
@@ -16,6 +19,21 @@ header.addEventListener('click', () => {
     billedet.classList.remove('sløret');
 });
 
+// find side med link-hash
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = decodeURIComponent(window.location.hash.slice(1));
+    if (!hash) return;
+
+    document.querySelectorAll('template').forEach(template => {
+        template.content.querySelectorAll('item').forEach(item => {
+            if (item.getAttribute('slug') === hash) {
+                visIndhold(item);
+            }
+        });
+    });
+});
+
+// menu lytter efter klik
 menu.querySelectorAll('p').forEach(punkt => {
     punkt.addEventListener('click', () => {
         const key = punkt.dataset.target;
@@ -23,6 +41,7 @@ menu.querySelectorAll('p').forEach(punkt => {
     })
 });
 
+// vis submenu
 function visSubmenu (key) {
     const template = document.getElementById(`data-${key}`);
     const items = template.content.querySelectorAll('item');
@@ -57,10 +76,13 @@ function visSubmenu (key) {
     });
 };
 
+// vis indhold
 function visIndhold (item) {
     const tekst = item.querySelector('tekst')
     content.innerHTML = tekst ? tekst.innerHTML : '';
     images.innerHTML = '';
+
+    window.location.hash = item.getAttribute('slug'); //sæt location-hash
 
     const player = item.querySelector('player');
     if (player) {
