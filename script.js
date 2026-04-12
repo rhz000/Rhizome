@@ -27,6 +27,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const hash = decodeURIComponent(window.location.hash.slice(1));
     if (!hash) return;
 
+    const releases = ['releases'];
+    if (releases.includes(hash)) {
+        visSubmenu(hash);
+        return;
+    }
+
+
     document.querySelectorAll('template').forEach(template => {
         template.content.querySelectorAll('item').forEach(item => {
             if (item.getAttribute('slug') === hash) {
@@ -64,18 +71,41 @@ function visSubmenu (key) {
     };
 
     submenu.innerHTML = '';
-
+    content.innerHTML = '';
+    images.innerHTML = '';
+    window.location.hash = 'releases';
+    aktivtItem = null;
     aktivKey = key;
 
     items.forEach(item => {
-        const el = document.createElement('p');
-        el.textContent = item.getAttribute('name');
+        const box = document.createElement('div');
+        box.className = 'release-kort';
 
-        el.addEventListener('click', () => {
+        const billeder = item.querySelectorAll('img');
+        const førsteImg = document.createElement('img');
+        førsteImg.src = billeder[0].getAttribute('src');
+        box.appendChild(førsteImg);
+
+        const boxTekst = document.createElement('div');
+        boxTekst.className = 'release-kort-tekst';
+
+        const navn = item.getAttribute('name').split(': ');
+        const kunstner = document.createElement('p');
+        kunstner.textContent = navn[0];
+        kunstner.className = 'release-kort-kunstner';
+        const titel = document.createElement('p');
+        titel.textContent = navn[1] || '';
+        titel.className = 'release-kort-titel';
+
+        boxTekst.appendChild(titel);
+        boxTekst.appendChild(kunstner);
+        box.appendChild(boxTekst);
+
+        box.addEventListener('click', () => {
             visIndhold(item);
         });
 
-        submenu.appendChild(el);
+        submenu.appendChild(box);
     });
 };
 
@@ -91,21 +121,6 @@ function visIndhold (item) {
 
     window.location.hash = item.getAttribute('slug'); //sæt location-hash
 
-    const player = item.querySelector('player');
-    if (player) {
-        const knap = document.createElement('p');
-        knap.textContent = '▶︎ ' + item.getAttribute('name');
-        knap.style.cursor = 'pointer';
-        knap.className = 'play-knap';
-
-        knap.addEventListener('click', () => {
-            playerdiv.innerHTML = '';
-            playerdiv.appendChild(player.cloneNode(true));
-        });
-
-        content.prepend(knap);
-    }
-
     if (billeder.length > 0 && window.innerWidth <= 600) {
     const førsteImg = document.createElement('img');
     førsteImg.src = billeder[0].getAttribute('src');
@@ -118,6 +133,21 @@ function visIndhold (item) {
         cap.className = 'image-caption';
         content.appendChild(cap);
     }
+    }
+
+    const player = item.querySelector('player');
+    if (player) {
+        const knap = document.createElement('p');
+        knap.textContent = '▶︎ ' + item.getAttribute('name');
+        knap.style.cursor = 'pointer';
+        knap.className = 'play-knap';
+
+        knap.addEventListener('click', () => {
+            playerdiv.innerHTML = '';
+            playerdiv.appendChild(player.cloneNode(true));
+        });
+
+        content.appendChild(knap);
     }
 
     if (tekst) {

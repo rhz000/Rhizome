@@ -114,42 +114,58 @@ h2 {
     background-color: #d9d9d9;
 }
 
-#submenu-container {
-    display: flex;
-    justify-content: center;
-}
+
 
 #submenu {
-    margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:space-between;
-    gap: 0.5rem;
-    max-width: 800px;
-    background-color: #ddd;
-    padding: 1rem;
-    border-radius: 1rem;
-}
-
-#submenu p {
-    line-height: 1;
-    cursor: pointer;
-    background-color: #e3e3e3;
-    border-radius: 1rem;
-    padding: 0.4rem;
-    width: fit-content;
-    font-family: "bc-alphapipe", sans-serif;
-    font-weight: 600;
-    font-size: 0.8rem;
-}
-
-#submenu p:hover {
-    background-color: #d9d9d9;
+    justify-content: center;
+    gap: 1rem;
 }
 
 #submenu:empty {
     display: none;
+}
+
+.release-kort {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-radius: 1rem;
+    height: 5rem;
+    width: 18rem;
+    font-size: 1rem;
+    line-height: 1;
+    background-color: #ddd;
+    cursor: pointer;
+    filter: opacity(0.9);
+}
+
+.release-kort:hover {
+    background-color: #e5e5e5;
+    filter: opacity(1);
+}
+
+.release-kort img {
+    height: 100%;
+    width: auto;
+    border-radius: 1rem 0 0 1rem;
+}
+
+.release-kort-tekst {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.release-kort-titel {
+    font-weight: 600;
+}
+
+.release-kort-kunstner {
+    font-weight: 400;
 }
 
 
@@ -263,10 +279,6 @@ iframe {
     height: auto;
   }
 
-  #submenu {
-    flex-direction: column;
-  }
-
   #player {
     width: 300px;
   }
@@ -289,6 +301,14 @@ iframe {
 
   .play-knap {
     margin-bottom: 1rem;
+  }
+
+  #submenu {
+    flex-direction: column;
+  }
+
+  .release-kort {
+    width: 100%;
   }
 }
 
