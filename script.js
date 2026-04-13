@@ -58,6 +58,7 @@ function visSubmenu (key) {
 
     if (key === aktivKey) {
         submenu.innerHTML = '';
+        window.location.hash = '';
         aktivKey = null;
         return;
     }
