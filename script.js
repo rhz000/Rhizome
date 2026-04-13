@@ -2,7 +2,6 @@
 const header = document.querySelector('header');
 const menu = document.getElementById('menu');
 const submenu = document.getElementById('submenu');
-const submenuContainer = document.getElementById('submenu-container');
 const content = document.getElementById('content');
 const images = document.getElementById('images');
 const playerdiv = document.getElementById('player');
@@ -32,7 +31,6 @@ window.addEventListener('DOMContentLoaded', () => {
         visSubmenu(hash);
         return;
     }
-
 
     document.querySelectorAll('template').forEach(template => {
         template.content.querySelectorAll('item').forEach(item => {
