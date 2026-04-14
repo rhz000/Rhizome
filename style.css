@@ -231,6 +231,8 @@ img {
     cursor: default;
 }
 
+
+
 #player {
     position: fixed;
     bottom: 1rem;
@@ -246,10 +248,33 @@ iframe {
     opacity: 0.75;
 }
 
+
+
 .play-knap {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+
+    gap: 0rem 1rem;
     font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.knap-knap {
+    font-weight: 400;
     width: fit-content;
-    font-size: 1.3rem;
+    height: fit-content;
+    color: #eee;
+    background-color: #333;
+    opacity: 0.5;
+    padding: 0.2rem 1.3rem 0rem 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    align-content: center;
+}
+
+.knap-knap:hover {
+    opacity: 0.25;
 }
 
 @media (max-width: 600px) {
@@ -295,11 +320,7 @@ iframe {
   }
 
   #content .image-caption {
-    margin-top: 0.25rem;
-    margin-bottom: 1rem;
-  }
-
-  .play-knap {
+    margin-top: 0.2rem;
     margin-bottom: 1rem;
   }
 

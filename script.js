@@ -140,6 +140,7 @@ function visIndhold (item) {
     aktivtItem = item;
     const tekst = item.querySelector('tekst');
     const billeder = item.querySelectorAll('img');
+    const player = item.querySelector('player');
 
     // ryd indhold
     content.innerHTML = '';
@@ -147,11 +148,11 @@ function visIndhold (item) {
 
     window.location.hash = item.getAttribute('slug'); //sæt location-hash
 
+    // første billede
     if (billeder.length > 0 && window.innerWidth <= 600) {
     const førsteImg = document.createElement('img');
     førsteImg.src = billeder[0].getAttribute('src');
     content.appendChild(førsteImg);
-
     const caption = billeder[0].getAttribute('caption');
     if (caption) {
         const cap = document.createElement('p');
@@ -161,27 +162,45 @@ function visIndhold (item) {
     }
     }
 
-    const player = item.querySelector('player');
+    // titel og bandcamp-playknap
     if (player) {
-        const knap = document.createElement('p');
-        knap.textContent = '▶︎ ' + item.getAttribute('name');
-        knap.style.cursor = 'pointer';
+        const knap = document.createElement('div');
+        const knapTitel = document.createElement('div');
+        const knapKnap = document.createElement('div');
+        knapTitel.className = 'knap-titel';
+        knapKnap.className = 'knap-knap';
+        knapTitel.textContent = item.getAttribute('name');
+        knapKnap.textContent = '▶︎';
+        knap.appendChild(knapTitel);
+        knap.appendChild(knapKnap);
         knap.className = 'play-knap';
 
-        knap.addEventListener('click', () => {
+        knapKnap.addEventListener('click', () => {
+            playerdiv.style.transition = 'none';
+            playerdiv.style.opacity = '0';
             playerdiv.innerHTML = '';
             playerdiv.appendChild(player.cloneNode(true));
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    playerdiv.style.transition = 'opacity 1s';
+                    playerdiv.style.opacity = '1';
+                });
+            });
         });
 
         content.appendChild(knap);
-    }
+    };
 
+
+
+    // tekst
     if (tekst) {
     const tekstNode = document.createElement('div');
     tekstNode.innerHTML = tekst.innerHTML;
     content.appendChild(tekstNode);
     }
 
+    // de sidste billeder
     const startIndex = window.innerWidth <= 600 ? 1 : 0;
     Array.from(billeder).slice(startIndex).forEach(img => {
         const el = document.createElement('img');
