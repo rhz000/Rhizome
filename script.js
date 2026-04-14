@@ -219,11 +219,15 @@ function visIndhold (item) {
         }
     });
 
+
+
     // video
     if (video) {
         const wrapper = document.createElement('div');
+        const ratio = video.getAttribute('ratio') || '16/9';
+        wrapper.style.aspectRatio = ratio;
+        wrapper.style.width = '100%';
         wrapper.innerHTML = video.innerHTML;
-        wrapper.className = 'videos';
         images.appendChild(wrapper);
     }
 
