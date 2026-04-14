@@ -6,20 +6,24 @@ const content = document.getElementById('content');
 const images = document.getElementById('images');
 const playerdiv = document.getElementById('player');
 const billedet = document.getElementById('billedet');
-let aktivKey = null;
 let aktivtItem = null;
 let erMobil = window.innerWidth <= 600;
+let submenuGeneration = 0;
+
+
 
 // header-klik, rydder indhold
 header.addEventListener('click', () => {
     window.location.hash = '';
     submenu.innerHTML = '';
-    aktivKey = null;
     aktivtItem = null;
     content.innerHTML = '';
     images.innerHTML = '';
     billedet.classList.remove('sløret');
+    submenuGeneration++;
 });
+
+
 
 // find side med link-hash
 window.addEventListener('DOMContentLoaded', () => {
@@ -41,6 +45,8 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
 // menu lytter efter klik
 menu.querySelectorAll('p').forEach(punkt => {
     punkt.addEventListener('click', () => {
@@ -49,34 +55,46 @@ menu.querySelectorAll('p').forEach(punkt => {
     })
 });
 
+
+
 // vis submenu
 function visSubmenu (key) {
     const template = document.getElementById(`data-${key}`);
     const items = template.content.querySelectorAll('item');
 
-    if (key === aktivKey) {
+    submenuGeneration++;
+    const minGeneration = submenuGeneration;
+
+    // hvis subemenuen allerede vises, luk den
+    if (key === window.location.hash.slice(1)) {
         submenu.innerHTML = '';
+        content.innerHTML = '';
+        images.innerHTML = '';
+        billedet.classList.remove('sløret');
         window.location.hash = '';
-        aktivKey = null;
         return;
-    }
-    
+    };
+
     billedet.classList.add('sløret');
 
+    // hvis der kun er et item, gå direkte til indhold
     if (items.length === 1) {
         submenu.innerHTML = '';
         visIndhold(items[0]);
         return;
     };
 
+    // ryd siden for indhold
     submenu.innerHTML = '';
     content.innerHTML = '';
     images.innerHTML = '';
-    window.location.hash = 'releases';
+    window.location.hash = key; //sæt location-hash for den valgte submenu
     aktivtItem = null;
-    aktivKey = key;
 
-    items.forEach(item => {
+    // lav release-kort
+    items.forEach((item, index) => {
+        setTimeout(() => {
+        if (submenuGeneration !== minGeneration) return;
         const box = document.createElement('div');
         box.className = 'release-kort';
 
@@ -104,17 +122,26 @@ function visSubmenu (key) {
             visIndhold(item);
         });
 
+        box.style.opacity = '0';
         submenu.appendChild(box);
+        requestAnimationFrame(() => {
+        box.style.transition = 'opacity 0.25s';
+        box.style.opacity = '1';
+        });
+
+    }, index * 25);
     });
 };
+
+
 
 // vis indhold
 function visIndhold (item) {
     aktivtItem = item;
-
     const tekst = item.querySelector('tekst');
     const billeder = item.querySelectorAll('img');
 
+    // ryd indhold
     content.innerHTML = '';
     images.innerHTML = '';
 
@@ -171,8 +198,9 @@ function visIndhold (item) {
     });
 
     submenu.innerHTML = '';
-    aktivKey = null;
 };
+
+
 
 // genopbygger indhold hvis skærmstørrelse ændres
 window.addEventListener('resize', () => {
