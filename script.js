@@ -141,6 +141,7 @@ function visIndhold (item) {
     const tekst = item.querySelector('tekst');
     const billeder = item.querySelectorAll('img');
     const player = item.querySelector('player');
+    const video = item.querySelector('video-embed');
 
     // ryd indhold
     content.innerHTML = '';
@@ -200,6 +201,8 @@ function visIndhold (item) {
     content.appendChild(tekstNode);
     }
 
+    
+
     // de sidste billeder
     const startIndex = window.innerWidth <= 600 ? 1 : 0;
     Array.from(billeder).slice(startIndex).forEach(img => {
@@ -215,6 +218,14 @@ function visIndhold (item) {
             images.appendChild(cap);
         }
     });
+
+    // video
+    if (video) {
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = video.innerHTML;
+        wrapper.className = 'videos';
+        images.appendChild(wrapper);
+    }
 
     submenu.innerHTML = '';
 };

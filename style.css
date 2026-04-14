@@ -277,6 +277,14 @@ iframe {
     opacity: 0.25;
 }
 
+
+
+#images iframe {
+    width: 100%;
+    height: auto;
+}
+
+
 @media (max-width: 600px) {
   body {
     overflow-y: auto;
