@@ -189,7 +189,7 @@ h2 {
 
 .layout {
     display: grid;
-    grid-template-columns: minmax(100px, 600px) minmax(100px, 600px);
+    grid-template-columns: minmax(100px, 700px) minmax(100px, 700px);
     justify-content: center;
     flex: 1;
     gap: 2rem;

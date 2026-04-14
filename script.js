@@ -14,6 +14,7 @@ let submenuGeneration = 0;
 
 // header-klik, rydder indhold
 header.addEventListener('click', () => {
+    document.title = 'Rhizome';
     window.location.hash = '';
     submenu.innerHTML = '';
     aktivtItem = null;
@@ -47,6 +48,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+// genopbygger indhold hvis skærmstørrelse ændres
+window.addEventListener('resize', () => {
+    const mobilNu = window.innerWidth <= 600;
+    
+    if (mobilNu !== erMobil) {
+        erMobil = mobilNu;
+        
+        if (aktivtItem) {
+            visIndhold(aktivtItem);
+        }
+    }
+});
+
+
+
 // menu lytter efter klik
 menu.querySelectorAll('p').forEach(punkt => {
     punkt.addEventListener('click', () => {
@@ -67,6 +83,7 @@ function visSubmenu (key) {
 
     // hvis subemenuen allerede vises, luk den
     if (key === window.location.hash.slice(1)) {
+        document.title = 'Rhizome';
         submenu.innerHTML = '';
         content.innerHTML = '';
         images.innerHTML = '';
@@ -89,6 +106,7 @@ function visSubmenu (key) {
     content.innerHTML = '';
     images.innerHTML = '';
     window.location.hash = key; //sæt location-hash for den valgte submenu
+    document.title = 'Rhizome · ' + key;
     aktivtItem = null;
 
     // lav release-kort
@@ -146,8 +164,11 @@ function visIndhold (item) {
     // ryd indhold
     content.innerHTML = '';
     images.innerHTML = '';
+    submenu.innerHTML = '';
+    billedet.classList.add('sløret');
 
     window.location.hash = item.getAttribute('slug'); //sæt location-hash
+    document.title = 'Rhizome · ' + item.getAttribute('name'); //sæt sidetitel
 
     // første billede
     if (billeder.length > 0 && window.innerWidth <= 600) {
@@ -192,16 +213,12 @@ function visIndhold (item) {
         content.appendChild(knap);
     };
 
-
-
     // tekst
     if (tekst) {
     const tekstNode = document.createElement('div');
     tekstNode.innerHTML = tekst.innerHTML;
     content.appendChild(tekstNode);
     }
-
-    
 
     // de sidste billeder
     const startIndex = window.innerWidth <= 600 ? 1 : 0;
@@ -219,8 +236,6 @@ function visIndhold (item) {
         }
     });
 
-
-
     // video
     if (video) {
         const wrapper = document.createElement('div');
@@ -231,20 +246,4 @@ function visIndhold (item) {
         images.appendChild(wrapper);
     }
 
-    submenu.innerHTML = '';
 };
-
-
-
-// genopbygger indhold hvis skærmstørrelse ændres
-window.addEventListener('resize', () => {
-    const mobilNu = window.innerWidth <= 600;
-    
-    if (mobilNu !== erMobil) {
-        erMobil = mobilNu;
-        
-        if (aktivtItem) {
-            visIndhold(aktivtItem);
-        }
-    }
-});
