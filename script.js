@@ -238,12 +238,37 @@ function visIndhold (item) {
 
     // video
     if (video) {
-        const wrapper = document.createElement('div');
-        const ratio = video.getAttribute('ratio') || '16/9';
-        wrapper.style.aspectRatio = ratio;
-        wrapper.style.width = '100%';
-        wrapper.innerHTML = video.innerHTML;
-        images.appendChild(wrapper);
+        const videoid = video.getAttribute('data-video-id'); //få videoens ID
+        const thumbnails = document.getElementById('thumbnails'); //find thumbnails-elementet
+        const thumbnail = thumbnails.querySelector(`[data-video-id="${videoid}"]`); //find den relevante thumbnail
+        const releaseThumb = thumbnail.cloneNode(true); //kopier elementet fra thumbnails
+        images.appendChild(releaseThumb); //indsæt thumbnail på siden
+
+        const vCaption = video.getAttribute('caption');
+        let vCap = null;
+        if (vCaption) {
+            vCap = document.createElement('p');
+            vCap.textContent = vCaption;
+            vCap.className = 'image-caption';
+            images.appendChild(vCap);
+        }
+
+        releaseThumb.addEventListener('click', () => {
+            releaseThumb.classList.add('skjult');
+
+            const wrapper = document.createElement('div');
+            const ratio = video.getAttribute('ratio') || '16/9';
+            wrapper.style.aspectRatio = ratio;
+            wrapper.style.width = '100%';
+            wrapper.innerHTML = video.innerHTML;
+
+            if (vCap) {
+                images.insertBefore(wrapper, vCap);
+            } else {
+                images.appendChild(wrapper);
+            }
+        })
+        
     }
 
 };

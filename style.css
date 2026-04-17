@@ -187,11 +187,11 @@ h2 {
 
 
 
-/* VIDEO THUMBNAIL
+
 .video-thumb {
   position: relative;
   cursor: pointer;
-  width: 30rem;
+  width: 100%;
 }
 
 .video-thumb:hover {
@@ -203,7 +203,7 @@ h2 {
   display: block;
 }
 
-.play-button {
+.thumb-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -214,7 +214,7 @@ h2 {
   border-radius: 50%;
   padding: 0.9rem 1.25rem 0.9rem 1.5rem;
 }
-*/
+
 
 
 

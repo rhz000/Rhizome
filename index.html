@@ -100,7 +100,7 @@ RHZ-029
 2025 Rhizome</tekst>
                 <img src="billeder/releases/ephemeral.jpg" caption="Ephemeral artwork © Elsebet Schütze">
                 <img src="billeder/artists/alto-aria-ephemeral.jpeg" caption="Alto Aria © Laura Cecilie Krogtoft">
-                <video-embed>
+                <video-embed data-video-id="nCp6DOmevjY" caption="video for Stars Align">
                     <iframe src="https://www.youtube-nocookie.com/embed/nCp6DOmevjY?si=M4savEg13dYb7rYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </video-embed>
                 <player>
@@ -127,6 +127,8 @@ RHZ-027
 2025 Rhizome</tekst>
         <img src="billeder/releases/blue-is-the-color-of-infinity.jpg" caption="Blue is the color of infinity artwork © Inge Maria Maier & Iben April Hegreberg">
         <img src="billeder/artists/nemo-blue-is-the-color-of-infinity.jpeg" caption="Nemo © Marthe Bleu">
+        <video-embed ratio="1/1" data-video-id="MBOrwCX8C_4" caption="video for Monster">
+            <iframe src="https://www.youtube-nocookie.com/embed/MBOrwCX8C_4?si=aY5gQ8S7XCY5DkrF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>        </video-embed>
         <player>
             <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=4277062771/size=small/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" seamless><a href="https://rhz000.bandcamp.com/album/blue-is-the-color-of-infinity">Blue is the color of infinity by Nemo</a></iframe>
         </player>
@@ -184,7 +186,7 @@ RHZ-024
 2024 Rhizome</tekst>
             <img src="billeder/releases/the-weeping-siege.jpg" caption="The Weeping Siege artwork © Orgaphine">
             <img src="billeder/artists/lau-andersson-the-weeping-siege.jpeg" caption="Lau Andersson © Orgaphine">
-            <video-embed ratio="2.4/1">
+            <video-embed ratio="2.4/1" data-video-id="R-K12bNfZ4A" caption="video for Chasing What's To Come">
                 <iframe src="https://www.youtube-nocookie.com/embed/R-K12bNfZ4A?si=Wqu63axg0RRVJMeT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </video-embed>
             <player>
@@ -205,7 +207,7 @@ RHZ-023
 2024 Rhizome</tekst>
                 <img src="billeder/releases/envelope-follower.jpg" caption="envelope follower artork © Christian Kingo">
                 <img src="billeder/artists/messell-envelope-follower.jpeg" caption="Messell © Messell">
-                <video-embed ratio="1/1">
+                <video-embed ratio="1/1" data-video-id="5L5N7LkcBKc" caption="video for envelope follower_III">
                     <iframe src="https://www.youtube-nocookie.com/embed/5L5N7LkcBKc?si=_drOmSByGfIjAhV1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </video-embed>
                 <player>
@@ -577,7 +579,7 @@ RHZ-004
                 <img src="billeder/releases/oddkin.jpg" caption="oddkin artwork © Organs named they like you">
                 <img src="billeder/releases/physical/oddkin-poster.jpg" caption="oddkin poster © Mads Krue Bugge & Aria Leth Schütze">
                 <img src="billeder/artists/ioulus-oddkin.jpeg" caption="ioulus © Aria Leth Schütze">
-                <video-embed>
+                <video-embed data-video-id="0N-f7hVQ6Ak" caption=" video for oddkin">
                     <iframe src="https://www.youtube-nocookie.com/embed/0N-f7hVQ6Ak?si=nvfJ4q-mQLYjwotZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </video-embed>
                 <player>
@@ -781,13 +783,28 @@ Founded in the Spring of 2020 by <a href="https://altoaria.com" target="_blank">
 
     <div id="player"></div>
 
-    <!--
-    <div class="video-thumb" data-video-id="5L5N7LkcBKc">
-        <img src="billeder/releases/video-stills/envelope-follower.jpeg">
-        <div class="play-button">▶</div>
+    <div id="thumbnails" style="display: none;">
+        <div class="video-thumb" data-video-id="nCp6DOmevjY"> <!-- ALTO ARIA -->
+            <img src="billeder/releases/video-stills/stars-align.jpeg">
+            <div class="thumb-button">▶</div>
+        </div>
+        <div class="video-thumb" data-video-id="MBOrwCX8C_4"> <!-- NEMO -->
+            <img src="billeder/releases/video-stills/monster.jpeg">
+            <div class="thumb-button">▶</div>
+        </div>
+         <div class="video-thumb" data-video-id="R-K12bNfZ4A"> <!-- LAU ANDERSSON -->
+            <img src="billeder/releases/video-stills/chasing-whats-to-come.jpeg">
+            <div class="thumb-button">▶</div>
+        </div>
+        <div class="video-thumb" data-video-id="5L5N7LkcBKc"> <!-- MESSELL -->
+            <img src="billeder/releases/video-stills/envelope-follower.jpeg">
+            <div class="thumb-button">▶</div>
+        </div>
+        <div class="video-thumb" data-video-id="0N-f7hVQ6Ak"> <!-- IOULUS -->
+            <img src="billeder/releases/video-stills/oddkin.jpeg">
+            <div class="thumb-button">▶</div>
+        </div>
     </div>
-    -->
-
 
     <script src="script.js"></script>
 
