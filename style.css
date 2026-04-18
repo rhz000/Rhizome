@@ -30,8 +30,8 @@ ul, ol {
 }
 
 a {
-  text-decoration: underline;
-  color: inherit;
+  text-decoration: wavy underline;
+  color: #333;
   font-weight: 500;
   font-size: 1.2rem;
 }
