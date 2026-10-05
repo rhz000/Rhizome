@@ -6,7 +6,6 @@ const content = document.getElementById('content');
 const images = document.getElementById('images');
 const playerdiv = document.getElementById('player');
 const billedet = document.getElementById('billedet');
-const latestRelease = document.getElementById('latest-release');
 let aktivtItem = null;
 let erMobil = window.innerWidth <= 600;
 let submenuGeneration = 0;
@@ -23,7 +22,6 @@ header.addEventListener('click', () => {
     images.innerHTML = '';
     billedet.classList.remove('sløret');
     submenuGeneration++;
-    latestRelease.classList.remove('skjult');
 });
 
 
@@ -82,8 +80,6 @@ function visSubmenu (key) {
 
     submenuGeneration++;
     const minGeneration = submenuGeneration;
-
-    latestRelease.classList.add('skjult');
 
     // hvis subemenuen allerede vises, luk den
     if (key === window.location.hash.slice(1)) {
