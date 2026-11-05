@@ -147,7 +147,7 @@ function visSubmenu (key) {
         box.style.opacity = '1';
         });
 
-    }, index * 25);
+    }, index * 20);
     });
 };
 
