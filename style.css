@@ -245,38 +245,6 @@ h2 {
 
 
 
-
-.video-thumb {
-  position: relative;
-  cursor: pointer;
-  width: 100%;
-  border-radius: 1rem;
-}
-
-.video-thumb:hover {
-    opacity: 0.9;
-}
-
-.video-thumb img {
-  width: 100%;
-  display: block;
-}
-
-.thumb-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 30px;
-  color: rgba(255, 255, 255, 0.85);
-  background: rgba(0,0,0,0.25);
-  border-radius: 50%;
-  padding: 0.9rem 1.25rem 0.9rem 1.5rem;
-}
-
-
-
-
 .layout {
     display: grid;
     grid-template-columns: minmax(100px, 700px) minmax(100px, 700px);
@@ -364,14 +332,6 @@ img {
 iframe {
     border-radius: 1rem;
     opacity: 0.75;
-}
-
-
-
-#images iframe {
-    width: 100%;
-    height: 100%;
-    opacity: 1;
 }
 
 

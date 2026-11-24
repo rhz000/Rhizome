@@ -266,8 +266,8 @@ Video by Christian Kingo
 Press photo by Martin Messell
 `,
             images: [
-                { src: "billeder/releases/envelope-follower.jpg", caption: "envelope follower artork © Christian Kingo" },
-                { src: "billeder/artists/messell-envelope-follower.jpeg", caption: "Messell © Messell" }
+                { src: "billeder/releases/envelope-follower.jpg", caption: "envelope follower artwork © Christian Kingo" },
+                { src: "billeder/artists/messell-envelope-follower.jpeg", caption: "Messell" }
             ],
             links: [
                 { text: "video for envelope follower_III on YouTube", url: "https://www.youtube.com/watch?v=5L5N7LkcBKc" }
