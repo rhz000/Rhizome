@@ -1,16 +1,16 @@
 // ============================================================
 // RHIZOME · indhold
 //
-// Her redigerer du sidens indhold. Resten (script.js, index.html) rører du normalt ikke.
+// Her redigeres sidens indhold. Resten (script.js, index.html, style.css) røres normalt ikke.
 //
 // NY UDGIVELSE: kopier en eksisterende udgivelse, sæt den øverst i listen
-// og ret felterne. Rækkefølgen i listen er rækkefølgen på siden (nyeste øverst).
+// og ret felterne. Rækkefølgen i listen er nyeste øverst.
 //
 // felter (alle undtagen name, slug og date er valgfrie):
 //   name         "Kunstner: Titel"  (kolon + mellemrum skiller kunstner og titel)
 //   slug         bruges i linket, fx rhz000.com/#nina-liv-softwired
 //   date         ÅÅÅÅ-MM-DD, vises som "released October 23, 2026"
-//   catalog      fx "RHZ-031" (året efter vises automatisk ud fra date)
+//   catalog      fx "RHZ-031"
 //   bandcamp     { slug: "...", albumId: "..." }
 //                slug = det sidste stykke af album-linket, albumId = tallet i embed-koden (album=XXXX)
 //   description  fri tekst (HTML tilladt, fx <a href="...">)
@@ -30,7 +30,7 @@ const data = {
             name: "Samler På Dig: Første Samling",
             slug: "samler-paa-dig-foerste-samling",
             date: "2026-10-30",
-            bandcamp: { slug: "f-rste-samling", albumId: "4031438363" },
+            bandcamp: { slug: "foerste-samling", albumId: "4031438363" },
             credits: `
 Music by Aria Leth Schütze
 Guitar by Lola Hammerich on “Ud Af Støjen”
